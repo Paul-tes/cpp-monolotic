@@ -5,9 +5,9 @@ int main(){
   cout << "Enter the row and col respectivly. >> ";
   cin >> r >> c;
 
-  int **A = (int **)malloc(sizeof(int*) * r);
+  int **A = (int **)malloc(sizeof(int*) * r); // allocating memory for int Pointer type row sized two keep the rows of array. 
 
-  for (int i = 0; i < r; i++) *(A + i) = (int *)malloc(sizeof(int) * c);
+  for (int i = 0; i < r; i++) *(A + i) = (int *)malloc(sizeof(int) * c); // allocating int type columen sized of each row. 
 
   cout << "Enter A array (" << r << "x" << c << ")\n";
 
@@ -35,6 +35,8 @@ cout << "Enter The array :> ";
   }
 */
 
+for (int i = 0; i < r; i++) free(*(A) + i); // free the memory of all rows.
+free(A); // free the memory of the Array was A Container of the rows of the array.
 
 
 
